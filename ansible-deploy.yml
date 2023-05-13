@@ -3,10 +3,10 @@
   vars:
   - warName: webapp.war
   - tomcat_version: 10.1.8
-  - warRemotePath: /root/maven-project/target/LoginWebApp-1.war 
+  - warRemotePath: /root/maven-project/server/LoginWebApp-1.war 
 
   tasks:
   - name: Copy WAR to Remote server
     become: yes
-    copy: src=/server/LoginWebApp-1.war  dest=/opt/tomcat10/webapps/simpli-project-0.0.1-SNAPSHOT.war  owner=tomcat group=tomcat
+    copy: src=/root/mavev-project/server/LoginWebApp-1.war  dest=/opt/tomcat10/webapps/simpli-project-0.0.1-SNAPSHOT.war  owner=tomcat group=tomcat
 
