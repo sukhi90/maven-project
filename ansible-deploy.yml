@@ -8,5 +8,6 @@
   tasks:
   - name: Copy WAR to Remote server
     become: yes
-    copy: src=/root/mavev-project/server/LoginWebApp-1.war  dest=/opt/tomcat10/webapps/simpli-project-0.0.1-SNAPSHOT.war  owner=tomcat group=tomcat
+    become_user: root
+    copy: src=/root/mavev-project/server/LoginWebApp-1.war  dest=/opt/tomcat10/webapps/simpli-project-0.0.1-SNAPSHOT.war  owner=tomcat group=tomcat   remote_src:yes
 
